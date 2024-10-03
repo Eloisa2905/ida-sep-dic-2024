@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang=""es"
+<head>
+    <meta charset="UTF-8"
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo tabla y enlaces</title>
+    <style>
+        table{
+            width:50%;
+            border-collapse: collapse;
+            margin:20px 0;
+        }
+        table, th, td{
+            border: 1px solid black;
+        }
+        th, td{
+            padding:10px;
+            text-align: center;
+        }
+</style>
+</head>
+<body>
+    <h2>Ejemplo de tabla</h2>
+    <table>
+        <tr>
+<th>nombre</th>
+<th>edad</th>
+<th>correo electronico</th>
+ </tr>
+ <tr>
+    <td>pedro fuentes</td>
+    <td>30</td>
+    <td>pedro.fuente@gmail.com</td>
+    </tr><tr>
+        <td>maria paulina</td>
+        <td>34</td>
+        <td>maria.paulina@gmail.com</td>
+        </tr>
+ </table>
+ <h2>Ejemplo de enlaces</h2>
+ <p>Visita los siguientes sitios web</p>
+ <ul><li><a href="https://www.google.com"target="_blank">google</a></li>
+
+</body>
+</html>
