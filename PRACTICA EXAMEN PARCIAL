@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agencia de Autos Asiáticos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #e0f7fa; /* Color de fondo */
+        }
+        .linea-roja {
+            height: 5px;
+            background-color: red;
+            margin: 10px 0;
+        }
+        .encabezado {
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .tabla-video-mapa, .tabla-autos {
+            width: 70%;
+            margin: 20px auto;
+            border-collapse: collapse;
+        }
+        .tabla-video-mapa td {
+            padding: 10px;
+        }
+        .tabla-autos td {
+            text-align: center;
+            padding: 10px;
+        }
+        .tabla-autos img {
+            width: 100px;
+            height: auto;
+        }
+        .tabla-autos a {
+            display: block;
+            margin-top: 10px;
+        }
+        .datos-estudiante {
+            text-align: center;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Línea roja superior -->
+    <div class="linea-roja"></div>
+
+    <!-- Encabezado -->
+    <div class="encabezado">
+        AGENCIA DE AUTOS ASIÁTICOS
+    </div>
+
+    <!-- Línea roja -->
+    <div class="linea-roja"></div>
+
+    <!-- Tabla con video y mapa -->
+    <table class="tabla-video-mapa">
+        <tr>
+            <td>Video</td>
+            <td>Mapa</td>
+        </tr>
+    </table>
+
+    <!-- Salto de línea -->
+    <br>
+
+    <!-- Tabla con logos de marcas, imagenes y links -->
+    <table class="tabla-autos" border="1">
+        <tr>
+            <td>Logo Marca 1<br><img src="" alt="Logo Marca 1"><br><a href="https://www.honda.mx">https://www.honda.mx</a></td>
+             <td>Logo Marca 2<br><img src="" alt="Logo Marca 2"><br><a href="https://www.nissan.com.mx/">https://ww.nissan.com.mx</a></td>
+            <td>Logo Marca 3<br><img src="" alt="Logo Marca 3"><br><a href="https://www.toyota.mx">https://www.toyota.mx</a></td>
+            <td>Logo Marca 4<br><img src="" alt="Logo Marca 4"><br><a href="https://www.mazda.mx">https://www.mazda.mx</a></td>
+        </tr>
+        <tr>
+            <td>Logo Marca 5<br><img src="" alt="Logo Marca 5"><br><a href="https://www.hyundai.com.mx">https://www.hyundai.com.mx</a></td>
+            <td>Logo Marca 6<br><img src="" alt="Logo Marca 6"><br><a href="https://www.kia.com/mx/main.html">https://www.kia.com/mx/main.html</a></td>
+            <td>Logo marca 7<br><img src="" alt="LOGO MARCA 7"><br><a href="https://www.mitsubishi-motors.mx">https://www.mitsubishi-motors.mx </a></td>
+            <td>Logo Marca 8<br><img src="" alt="Logo Marca 8"><br><a href="https://autos.suzuki.com.mx/?utm_source=google&utm_medium=paid-search&utm_campaign=suzuki-mexico&gad_source=1&gbraid=0aaaaac154ycwbpuggwbr9bdu0ijlspewm&gclid=cj0kcqjwmom3bhc8arisaosbapvayyw1yhup0ppiszzvpatq1uaf_frmfpr9simqvuinm6l-7224iooaau4bealw_wcb">https://autos.suzuki.com.mx/?utm_source=google&utm_medium=paid-search&utm_campaign=suzuki-mexico&gad_source=1&gbraid=0aaaaac154ycwbpuggwbr9bdu0ijlspewm&gclid=cj0kcqjwmom3bhc8arisaosbapvayyw1yhup0ppiszzvpatq1uaf_frmfpr9simqvuinm6l-7224iooaau4bealw_wcb</a></td>
+        </tr>
+    </table>
+
+    <!-- Línea roja -->
+    <div class="linea-roja"></div>
+
+    <!-- Datos del estudiante -->
+    <div class="datos-estudiante">
+        <p>Datos del estudiante</p>
+        <p>Nombre: ELOISA SARAI SERENO MARQUEZ</p>
+        <p>Correo: al45399@un.edu.mx</p>
+    </div>
+
+</body>
+</html>
