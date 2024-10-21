@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedido de Hamburguesas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f8f8f8;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border: none;
+            margin-bottom: 20px;
+        }
+        .logo {
+            text-align: center;
+            width: 25%;
+        }
+        .info {
+            width: 75%;
+            text-align: left;
+        }
+        hr {
+            border: 1px solid #000;
+            margin: 10px 0;
+        }
+        .separator {
+            border-top: 2px solid #000;
+            margin: 20px 0;
+        }
+        .pedido-table {
+            display: flex;
+            justify-content: space-between;
+        }
+        .pedido-column {
+            width: 30%;
+        }
+        .marquesina {
+            background-color: #1b3bda;
+            padding: 10px;
+            font-weight: bold;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <img src="HAMBURGUESA7.jpg" alt="Logotipo" style="width: 90%;">
+    </div>
+    <div class="info">
+        <h1>Hamburguesas king</h1>
+        <hr style="border-color: #ff0000;">
+        <p>Dirección: Calle Jose Maria Morelos y Pavon 523 Centro Santa Catarina</p>
+        <p>Teléfono: 8182586307 / 8107638528</p>
+        <p>Página Web: www.hamburguesasking.com</p>
+        <div class="marquesina">¡Las hamburguesas mas deli de la ciudad</div>
+    </div>
+</header>
+
+<div class="separator"></div>
+
+<div class="pedido-table">
+    <div class="pedido-column">
+        <h2>Selecciona tu hamburguesa</h2>
+        <form>
+            <fieldset>
+                <legend>Tipo de Hamburguesa</legend>
+                <label><input type="radio" name="hamburguesa" value="35.00"> Sencilla - $35.00</label><br>
+                <label><input type="radio" name="hamburguesa" value="45.00"> Especial - $45.00</label><br>
+                <label><input type="radio" name="hamburguesa" value="60.00"> Doble - $60.00</label><br>
+                <label><input type="radio" name="hamburguesa" value="90.00"> Suprema - $90.00</label><br>
+            </fieldset>
+            <fieldset>
+                <legend>Tipo de Carne</legend>
+                <label><input type="radio" name="carne" value="Tradicional"> Tradicional</label><br>
+                <label><input type="radio" name="carne" value="Especial"> Especial</label><br>
+                <label><input type="radio" name="carne" value="Angus"> Angus</label><br>
+                <label><input type="radio" name="carne" value="Pollo"> Pollo</label><br>
+                <label><input type="radio" name="carne" value="Roast Beef"> Roast Beef</label><br>
+            </fieldset>
+        </form>
+    </div>
+
+    <div class="pedido-column">
+        <h2>Ingredientes</h2>
+        <form>
+            <fieldset>
+                <legend>Selecciona los ingredientes</legend>
+                <label><input type="checkbox" name="ingredientes" value="Tomate"> Tomate</label><br>
+                <label><input type="checkbox" name="ingredientes" value="Cebolla"> Cebolla</label><br>
+                <label><input type="checkbox" name="ingredientes" value="Queso Amarillo"> Queso Amarillo</label><br>
+                <label><input type="checkbox" name="ingredientes" value="Jamon"> Jamón</label><br>
+                <label><input type="checkbox" name="ingredientes" value="Aguacate"> Aguacate</label><br>
+                <label><input type="checkbox" name="ingredientes" value="Tomate"> Cebolla morada</label><br>
+                <label><input type="checkbox" name="ingredientes" value="Cebolla"> Cqueso gouda</label><br>
+                <label><input type="checkbox" name="ingredientes" value="Queso Amarillo"> piña</label><br>
+                <label><input type="checkbox" name="ingredientes" value="Jamon"> champiñones</label><br>
+                <label><input type="checkbox" name="ingredientes" value="Aguacate"> peperoni</label><br>
+               
+
+                </html>
