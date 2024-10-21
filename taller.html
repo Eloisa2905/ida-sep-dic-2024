@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taller Autos flash </title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+        header {
+            background-color: #c84370;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header img {
+            width: 80px;
+            height: auto;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2em;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 20px;
+            border-radius: 8px;
+        }
+
+        .container > div {
+            width: 30%;
+        }
+
+        h2 {
+            color: #e14951;
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input[type="text"], select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        input[type="checkbox"], input[type="radio"] {
+            margin-right: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #be2b72;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #cf3b59;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #932b43;
+            color: white;
+        }
+    </style>
+    <script>
+        function mostrarMensaje() {
+            alert("GRACIAS POR CONFIAR EN NOSOTROS.... SU COCHE ESTÁ EN BUENAS MANOS");
+        }
+    </script>
+</head>
+<body>
+
+    <header>
+        <img src="logotipo.png" alt="Logotipo Taller Mecánico">
+        <h1>Taller Mecánico Autos flash</h1>
+    </header>
+
+    <div class="container">
+
+        <div>
+            <h2>Servicios</h2>
+            <form>
+                <label><input type="checkbox"> Cambio de Aceite y Filtro</label>
+                <label><input type="checkbox"> Afinación General</label>
+                <label><input type="checkbox"> Mantenimiento Aire Acondicionado</label>
+                <label><input type="checkbox"> Servicio de Frenos</label>
+                <label><input type="checkbox"> Sustitución del Filtro de Aceite</label>
+                <label><input type="checkbox"> Alineación y Balanceo</label>
+                <label><input type="checkbox"> Sistema de Enfriamiento</label>
+                <label><input type="checkbox"> Amortiguadores</label>
+            </form>
+        </div>
+
+ 
+        <div>
+            <h2>Tipo de Motor</h2>
+            <form>
+                <label><input type="radio" name="motor" value="4 cilindros"> 4 cilindros</label>
+                <label><input type="radio" name="motor" value="6 cilindros"> 6 cilindros</label>
+                <label><input type="radio" name="motor" value="8 cilindros"> 8 cilindros</label>
+
+                <h2>Tipo de Auto</h2>
+                <label><input type="radio" name="auto" value="sedan"> Sedan</label>
+                <label><input type="radio" name="auto" value="lujo"> Lujo</label>
+                <label><input type="radio" name="auto" value="deportivo"> Deportivo</label>
+                <label><input type="radio" name="auto" value="familiar"> Familiar</label>
+                <label><input type="radio" name="auto" value="camioneta"> Camioneta</label>
+            </form>
+        </div>
+
+   
+        <div>
+            <h2>Datos del Auto</h2>
+            <form>
+                <label>Marca: <input type="text" name="marca"></label>
+                <label>Modelo: <input type="text" name="modelo"></label>
+                <label>Año: <input type="text" name="año"></label>
+                <label>Kilometraje: <input type="text" name="kilometraje"></label>
+
+                <label>¿Requiere Factura? (si o no): <input type="text" name="factura"></label>
+
+                <h2>Forma de Pago</h2>
+                <label>Seleccione una opción:</label>
+                <select name="pago">
+                    <option value="efectivo">Efectivo</option>
+                    <option value="tarjeta">Tarjeta de Crédito o Débito</option>
+                    <option value="transferencia">Transferencia Electrónica</option>
+                    <option value="credito">Crédito a 3 meses</option>
+                </select>
+            </form>
+        </div>
+    </div>
+
+    <div style="text-align: center; margin-top: 20px;">
+        <button onclick="mostrarMensaje()">Enviar</button>
+    </div>
+
+   
+
+</body>
+</html>
