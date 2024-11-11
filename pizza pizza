@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>-Pizzas</title>
+    <style>
+        body {
+            background-color: #F98903;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            width: 90%;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .header, .footer {
+            margin-bottom: 20px;
+        }
+        .pizza-icon {
+            width: 10%;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background-color: #FFA540;
+            color: #333;
+        }
+        table, th, td {
+            border: 3px solid #FF5B00;
+        }
+        td {
+            padding: 15px;
+            vertical-align: top;
+            font-size: 16px;
+        }
+        h2 {
+            font-family: 'Broadway', sans-serif;
+        }
+        hr {
+            border: 1px solid #FF5B00;
+        }
+        input[type="text"], select {
+            margin-top: 10px;
+            padding: 5px;
+            width: 80%;
+            font-size: 16px;
+        }
+        input[type="radio"], input[type="checkbox"] {
+            margin-right: 10px;
+        }
+        b {
+            font-size: 20px;
+            font-weight: bold;
+        }
+    </style>
+    <script>
+        function PPP() {
+            const A = parseInt(document.pizzeria.canpiz.value) || 0;
+
+            let TB = 0;
+            if (document.pizzeria.cantpi[0].checked) { TB = 45; }
+            if (document.pizzeria.cantpi[1].checked) { TB = 90; }
+            if (document.pizzeria.cantpi[2].checked) { TB = 150; }
+            if (document.pizzeria.cantpi[3].checked) { TB = 250; }
+            if (document.pizzeria.cantpi[4].checked) { TB = 400; }
+
+            let TC = 0;
+            if (document.pizzeria.tippan[1].checked) { TC = 15; }
+            if (document.pizzeria.tippan[2].checked) { TC = 20; }
+            if (document.pizzeria.tippan[3].checked) { TC = 30; }
+
+            let TD = 0;
+            if (document.pizzeria.ingre1.checked) { TD += 5; }
+            if (document.pizzeria.ingre2.checked) { TD += 5; }
+            if (document.pizzeria.ingre3.checked) { TD += 5; }
+            if (document.pizzeria.ingre4.checked) { TD += 5; }
+            if (document.pizzeria.ingre5.checked) { TD += 5; }
+            if (document.pizzeria.ingre6.checked) { TD += 5; }
+            if (document.pizzeria.ingre7.checked) { TD += 5; }
+            if (document.pizzeria.ingre8.checked) { TD += 5; }
+
+            const E = parseInt(document.pizzeria.pizzaselect.value) || 0;
+            const F = document.pizzeria.bufff.value;
+            const G = parseInt(document.pizzeria.adul.value) || 0;
+            const H = parseInt(document.pizzeria.nin.value) || 0;
+
+            let TTT = 0;
+            if (F === "SI") {
+                TTT = (G * 120) + (H * 60);
+            } else {
+                TTT = (TB + TC + TD + E) * A;
+            }
+
+            document.pizzeria.totpiz.value = TTT;
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="minipizza.png" alt="Pizza" class="pizza-icon">
+            <img src="minipizza.png" alt="Pizza" class="pizza-icon">
+            <img src="minipizza.png" alt="Pizza" class="pizza-icon">
+            <img src="minipizza.png" alt="Pizza" class="pizza-icon">
+            <img src="minipizza.png" alt="Pizza" class="pizza-icon">
+            <img src="minipizza.png" alt="Pizza" class="pizza-icon">
+            <img src="minipizza.png" alt="Pizza" class="pizza-icon">
+            <img src="minipizza.png" alt="Pizza" class="pizza-icon">
+            <img src="minipizza.png"Pizza" class="pizza-icon">
+        </div>
+        <form name="pizzeria">
+            <table>
+                <tr>
+                    <td width="30%">
+                        <h2>CANTIDAD:</h2>
+                        <input type="text" name="canpiz" size="3" onchange="PPP();" value="1">
+                        <hr>
+                        <h2>TAMAÑO:</h2>
+                        <input type="radio" name="cantpi" onclick="PPP();" checked> Personal 45.00<br>
+                        <input type="radio" name="cantpi" onclick="PPP();"> Chica 90.00<br>
+                        <input type="radio" name="cantpi" onclick="PPP();"> Mediana 150.00<br>
+                        <input type="radio" name="cantpi" onclick="PPP();"> Familiar 250.00<br>
+                        <input type="radio" name="cantpi" onclick="PPP();"> Suprema 400.00<br>
+                        <hr>
+                        <h2>TIPO DE PAN:</h2>
+                        <input type="radio" name="tippan" onclick="PPP();" checked> Normal +0.00<br>
+                        <input type="radio" name="tippan" onclick="PPP();"> Delgada +15.00<br>
+                        <input type="radio" name="tippan" onclick="PPP();"> Pan Pizza +20.00<br>
+                        <input type="radio" name="tippan" onclick="PPP();"> Hut Cheese +30.00<br>
+                        <hr>
+                    </td>
+                    <td width="40%">
+                        <h2>INGREDIENTES (5.00 c/u):</h2>
+                        <input type="checkbox" name="ingre1" onclick="PPP();"> Jamon<br>
+                        <input type="checkbox" name="ingre2" onclick="PPP();"> Peperoni<br>
+                        <input type="checkbox" name="ingre3" onclick="PPP();"> Tocino<br>
+                        <input type="checkbox" name="ingre4" onclick="PPP();"> Champiñones<br>
+                        <input type="checkbox" name="ingre5" onclick="PPP();"> Chorizo Español<br>
+                        <input type="checkbox" name="ingre6" onclick="PPP();"> Piña<br>
+                        <input type="checkbox" name="ingre7" onclick="PPP();"> Salami<br>
+                        <input type="checkbox" name="ingre8" onclick="PPP();"> Aceitunas<br>
+                        <hr>
+                        <h2>ESPECIALES:</h2>
+                        <select name="pizzaselect" onchange="PPP();">
+                            <option value="0">Margarita +0.00</option>
+                            <option value="15">4 Quesos +15.00</option>
+                            <option value="10">Hawaiana +10.00</option>
+                            <option value="15">Napolitana +15.00</option>
+                            <option value="25">New York +25.00</option>
+                            <option value="30">Mexicana +30.00</option>
+                        </select>
+                        <hr>
+                        <h2>¿Quieres Buffet?</h2>
+                        <select name="bufff" onchange="PPP();">
+                            <option value="SI">Sí</option>
+                            <option value="NO">No</option>
+                        </select><br>
+                        Número de adultos (120.00 c/u): <input type="text" name="adul" size="2" onchange="PPP();" value="0"><br>
+                        Número de niños (60.00 c/u): <input type="text" name="nin" size="2" onchange="PPP();" value="0">
+                    </td>
+                    <td width="30%">
+                        <b>TOTAL A PAGAR:</b> <input type="text" name="totpiz" readonly>
+                    </td>
+                </tr>
+            </table>
+        </form>
+        <div class="footer">
+            <img src="minipizza.png" alt="Pizza" class="pizza-icon">
+            <img src="minipizza.png" alt="Pizza" class="pizza-icon">
+            <img src="minipizza.png" alt="Pizza" class="pizza-icon">
+            <img src="minipizza.png" alt="Pizza" class="pizza-icon">
+            <img src="minipizza.png" alt="Pizza" class="pizza-icon">
+            <img src="minipizza.png" alt="Pizza" class="pizza-icon">
+            <img src="minipizza.png" alt="Pizza" class="pizza-icon">
+            <img src="minipizza.png" alt="Pizza" class="pizza-icon">
+            <img src="minipizza.png" alt="Pizza" class="pizza-icon">
+        </div>
+    </div>
+</body>
+</html>
+
+     
