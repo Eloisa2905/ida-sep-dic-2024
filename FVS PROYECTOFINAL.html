@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transportes Fletes Sereno Váldez</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        /* Estilos globales */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color: #003366;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 36px;
+            text-transform: uppercase;
+        }
+        header p {
+            font-size: 18px;
+            margin: 5px 0 0;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #0055a4;
+            padding: 10px 0;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 20px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .inicio {
+            position: relative;
+            overflow: hidden;
+            height: 600px;
+        }
+        .inicio .slider {
+            display: flex;
+            width: 300%;
+            height: 100%;
+            animation: slide 10s infinite;
+        }
+        .inicio .slider img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .inicio:hover .slider {
+            animation-play-state: paused;
+        }
+        @keyframes slide {
+            0%, 33% {
+                transform: translateX(0%);
+            }
+            34%, 66% {
+                transform: translateX(-100%);
+            }
+            67%, 100% {
+                transform: translateX(-200%);
+            }
+        }
+        .inicio .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 51, 102, 0.7);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            z-index: 1;
+        }
+        .inicio h2 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+        .inicio p {
+            font-size: 20px;
+            margin-bottom: 40px;
+        }
+        .inicio button {
+            background-color: #0055a4;
+            border: none;
+            color: white;
+            padding: 15px 30px;
+            font-size: 18px;
+            cursor: pointer;
+            text-transform: uppercase;
+            border-radius: 5px;
+        }
+        .inicio button:hover {
+            background-color: #003366;
+        }
+        section {
+            padding: 40px;
+            background-color: white;
+        }
+        section h2 {
+            text-align: center;
+            color: #003366;
+            margin-bottom: 20px;
+        }
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        form label {
+            font-weight: bold;
+        }
+        form input, form select, form button {
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        form button {
+            background-color: #0055a4;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        form button:hover {
+            background-color: #003366;
+        }
+        #resultado {
+            text-align: center;
+            font-size: 18px;
+            margin-top: 20px;
+            color: #0055a4;
+            font-weight: bold;
+        }
+        .contacto {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            max-width: 600px;
+            margin: 0 auto;
+            font-size: 18px;
+        }
+        .contacto i {
+            color: #0055a4;
+            margin-right: 10px;
+        }
+        .contacto div {
+            display: flex;
+            align-items: center;
+        }
+        footer {
+            background-color: #003366;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+        footer p {
+            margin: 0;
+            font-size: 14px;
+        }
+
+        /* Estilos para la información de contacto */
+        #informacion-contacto {
+            text-align: left;
+        }
+        .contacto-item {
+            display: flex;
+            align-items: center;
+            margin: 10px 0;
+            font-size: 18px;
+        }
+        .contacto-item i {
+            color: #0055a4;
+            margin-right: 10px;
+            font-size: 20px;
+        }
+        .inicio .slider img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 10px; /* Bordes redondeados */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra elegante */
+        transition: transform 0.5s ease-in-out, filter 0.3s ease-in-out; /* Suavidad al cambiar */
+    }
+
+    .inicio .slider img:hover {
+        transform: scale(1.05); /* Aumenta ligeramente el tamaño al pasar el mouse */
+        filter: brightness(1.1); /* Incrementa la luminosidad al pasar el mouse */
+    }
+
+    /* Opcional: Ajuste para móviles */
+    @media (max-width: 768px) {
+        .inicio .slider img {
+            border-radius: 5px; /* Menos redondeado en pantallas pequeñas */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15); /* Sombra más sutil en móviles */
+        }
+    }
+    </style>
+</head>
+<body>
+    <!-- Encabezado -->
+    <header>
+        <h1>Transportes Fletes Sereno Váldez</h1>
+        <p>Transportes de carga viajes locales y foráneos</p>
+    </header>
+
+    <!-- Navegación -->
+    <nav>
+        <a href="#home">Inicio</a>
+        <a href="#cotizar">Cotizar</a>
+        <a href="#contact">Contacto</a>
+    </nav>
+
+    <!-- Sección de Inicio con Carrusel -->
+    <section id="home" class="inicio">
+        <div class="slider">
+            <img src="../img/carretera camion.jpeg" alt="img1">
+            <img src="../img/carretera.png" alt="Slide 2">
+            <img src="../img/inter.png" alt="Slide 3">
+        </div>
+        <div class="overlay">
+            <h2>Movemos tu mercancía con seguridad</h2>
+            
+            <button onclick="location.href='#cotizar';">Cotiza tu envío</button>
+        </div>
+    </section>
+
+    <!-- Formulario de Cotización -->
+    <section id="cotizar">
+        <h2>Cotizar un Envío</h2>
+        <form>
+            <label for="origen">Origen:</label>
+            <select id="origen">
+                <option value="">Selecciona una ciudad</option>
+                <option value="Ciudad de México">Ciudad de México</option>
+                <option value="Monterrey">Monterrey</option>
+                <option value="Guadalajara">Guadalajara</option>
+                <option value="Puebla">Puebla</option>
+                <option value="Tijuana">Tijuana</option>
+                <option value="Mérida">Mérida</option>
+                <option value="Cancún">Cancún</option>
+                <option value="Oaxaca">Oaxaca</option>
+                <option value="Querétaro">Querétaro</option>
+                <option value="Hermosillo">Hermosillo</option>
+                <option value="Saltillo">Saltillo</option>
+                <option value="Chihuahua">Chihuahua</option>
+                <option value="Aguascalientes">Aguascalientes</option>
+                <option value="Morelia">Morelia</option>
+                <option value="San Luis Potosí">San Luis Potosí</option>
+                <option value="León">León</option>
+                <option value="Toluca">Toluca</option>
+                <option value="Durango">Durango</option>
+                <option value="La Paz">La Paz</option>
+                <option value="Colima">Colima</option>
+                <option value="Culiacán">Culiacán</option>
+                <option value="Xalapa">Xalapa</option>
+                <option value="Tlaxcala">Tlaxcala</option>
+                <option value="Tuxtla Gutiérrez">Tuxtla Gutiérrez</option>
+                <option value="Villahermosa">Villahermosa</option>
+                <option value="Mazatlán">Mazatlán</option>
+                <option value="Chetumal">Chetumal</option>
+                <option value="Tepic">Tepic</option>
+                <option value="Zacatecas">Zacatecas</option>
+            </select>
+            <label for="destino">Destino:</label>
+            <select id="destino">
+                <option value="">Selecciona una ciudad</option>
+                <option value="Ciudad de México">Ciudad de México</option>
+                <option value="Monterrey">Monterrey</option>
+                <option value="Guadalajara">Guadalajara</option>
+                <option value="Puebla">Puebla</option>
+                <option value="Tijuana">Tijuana</option>
+                <option value="Mérida">Mérida</option>
+                <option value="Cancún">Cancún</option>
+                <option value="Oaxaca">Oaxaca</option>
+                <option value="Querétaro">Querétaro</option>
+                <option value="Hermosillo">Hermosillo</option>
+                <option value="Saltillo">Saltillo</option>
+                <option value="Chihuahua">Chihuahua</option>
+                <option value="Aguascalientes">Aguascalientes</option>
+                <option value="Morelia">Morelia</option>
+                <option value="San Luis Potosí">San Luis Potosí</option>
+                <option value="León">León</option>
+                <option value="Toluca">Toluca</option>
+                <option value="Durango">Durango</option>
+                <option value="La Paz">La Paz</option>
+                <option value="Colima">Colima</option>
+                <option value="Culiacán">Culiacán</option>
+                <option value="Xalapa">Xalapa</option>
+                <option value="Tlaxcala">Tlaxcala</option>
+                <option value="Tuxtla Gutiérrez">Tuxtla Gutiérrez</option>
+                <option value="Villahermosa">Villahermosa</option>
+                <option value="Mazatlán">Mazatlán</option>
+                <option value="Chetumal">Chetumal</option>
+                <option value="Tepic">Tepic</option>
+                <option value="Zacatecas">Zacatecas</option>
+            </select>
+            <label for="peso">Peso del envío (kg):</label>
+            <input type="number" id="peso" min="1" placeholder="Ingrese el peso en kilogramos">
+            <button type="button" onclick="calcularPrecio()">Calcular Precio</button>
+        </form>
+        <div id="resultado"></div>
+    </section>
+
+    <!-- Sección de Contacto -->
+    <section id="contact">
+        <h2>Información de Contacto</h2>
+        <div id="informacion-contacto">
+            <div class="contacto-item">
+                <i class="fas fa-phone-alt"></i>
+                <span>+52 81 1521 4025</span>
+            </div>
+            <div class="contacto-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>  José María Morelos y Pavón No. 523 Nte, Centro, Santa Catarina, Nuevo León</span>
+            </div>
+            <div class="contacto-item">
+                <i class="fas fa-user"></i>
+                <span>Encargado: Adrian Aarón Sereno Váldez</span>
+            </div>
+            <div class="contacto-item">
+                <i class="fas fa-envelope"></i>
+                <span>contacto@fletesseronovaldz.com</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pie de Página -->
+    <footer>
+        <p>&copy; 2024 Transportes Fletes Sereno Váldez. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+  function calcularPrecio() {
+    const origen = document.getElementById("origen").value.trim();
+    const destino = document.getElementById("destino").value.trim();
+    const peso = parseFloat(document.getElementById("peso").value.trim());
+    let precio = 0;
+
+    // Validar que todos los campos estén completos y que el peso sea un número válido
+    if (origen && destino && !isNaN(peso) && peso > 0) {
+        // Calcular el precio basado en las combinaciones de origen y destino
+        if (origen === "CiudadA" && destino === "CiudadB") {
+            precio = peso * 15 + 200; // Ejemplo para CiudadA a CiudadB
+        } else if (origen === "CiudadA" && destino === "CiudadC") {
+            precio = peso * 12 + 150; // Ejemplo para CiudadA a CiudadC
+        } else {
+            precio = peso * 10 + 100; // Precio base por defecto
+        }
+
+        document.getElementById("resultado").innerText = `Precio estimado: $${precio.toFixed(2)} MXN`;
+    } else {
+        document.getElementById("resultado").innerText = "Por favor completa todos los campos correctamente.";
+    }
+}
+
+    </script>
+</body>
+</html>   
