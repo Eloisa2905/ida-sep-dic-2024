@@ -197,30 +197,247 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
-        border-radius: 10px; /* Bordes redondeados */
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra elegante */
-        transition: transform 0.5s ease-in-out, filter 0.3s ease-in-out; /* Suavidad al cambiar */
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+        transition: transform 0.5s ease-in-out, filter 0.3s ease-in-out; 
     }
 
     .inicio .slider img:hover {
-        transform: scale(1.05); /* Aumenta ligeramente el tamaño al pasar el mouse */
-        filter: brightness(1.1); /* Incrementa la luminosidad al pasar el mouse */
+        transform: scale(1.05); 
+        filter: brightness(1.1); 
     }
 
-    /* Opcional: Ajuste para móviles */
+    /*Ajuste para otros dispositivos */
     @media (max-width: 768px) {
         .inicio .slider img {
-            border-radius: 5px; /* Menos redondeado en pantallas pequeñas */
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15); /* Sombra más sutil en móviles */
+            border-radius: 5px; 
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15); 
         }
     }
+    #valores {
+    padding: 40px;
+    background-color: #0055a4;
+}
+
+#valores h2 {
+    text-align: center;
+    color: hsl(209, 96%, 10%);
+    margin-bottom: 60px;
+}
+
+.valores {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.valor {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    min-width: 250px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.valor:hover {
+    transform: scale(1.05);
+}
+
+.icono {
+    font-size: 50px;
+    color: #0055a4;
+    margin-bottom: 15px;
+}
+
+.titulo {
+    font-size: 20px;
+    font-weight: bold;
+    color: #0a67c4;
+    margin-bottom: 10px;
+}
+
+.descripcion {
+    font-size: 14px;
+    color: #003366;
+    line-height: 1.6;
+}
+#nuestra-historia {
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.6); 
+    color: #fff;
+    padding: 80px 20px;
+}
+
+
+.contenido-historia {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 300px;
+}
+
+.texto-historia {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px 30px;
+    border-radius: 10px;
+    max-width: 600px;
+    text-align: left;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.texto-historia h2 {
+    font-size: 36px;
+    margin-bottom: 15px;
+    color: #ffffff; /* Dorado */
+    text-align: center;
+}
+
+.texto-historia p {
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 10px;
+}
+
+.texto-historia strong {
+    color: #0055a4; /* Resaltado */
+}
+
+@media (max-width: 768px) {
+    #nuestra-historia {
+        padding: 50px 10px;
+    }
+
+    .texto-historia {
+        max-width: 100%;
+    }
+}
+/* Estilo del Header */
+header {
+    position: relative; /* Posicionamiento para anclar el logo */
+    background-color: #003366;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* Logo en la esquina */
+.logo {
+    position: absolute; 
+    top: 10px; 
+    left: 10px; 
+    height: 60px; 
+    width: auto; 
+}
+
+/* Contenido del encabezado */
+.header-content {
+    display: inline-block; /* Centra el texto respetando el logo */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 36px;
+    text-transform: uppercase;
+}
+
+header p {
+    font-size: 18px;
+    margin: 5px 0 0;
+}
+/* Estilos del Carrusel */
+.inicio {
+    position: relative;
+    overflow: hidden;
+    height: 600px;
+}
+
+.inicio .slider {
+    display: flex;
+    width: 300%;
+    height: 100%;
+    animation: slide 15s infinite;
+}
+
+.inicio .slider img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease-in-out;
+}
+
+@keyframes slide {
+    0%, 33% {
+        transform: translateX(0%);
+    }
+    34%, 66% {
+        transform: translateX(-100%);
+    }
+    67%, 100% {
+        transform: translateX(-200%);
+    }
+}
+
+.inicio:hover .slider {
+    animation-play-state: paused;
+}
+
+.inicio .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 51, 102, 0.7);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 1;
+}
+
+.inicio h2 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.inicio p {
+    font-size: 20px;
+    margin-bottom: 40px;
+}
+
+.inicio button {
+    background-color: #0055a4;
+    border: none;
+    color: white;
+    padding: 15px 30px;
+    font-size: 18px;
+    cursor: pointer;
+    text-transform: uppercase;
+    border-radius: 5px;
+}
+
+.inicio button:hover {
+    background-color: #003366;
+}
+
+
+
     </style>
 </head>
 <body>
     <!-- Encabezado -->
     <header>
-        <h1>Transportes Fletes Sereno Váldez</h1>
-        <p>Transportes de carga viajes locales y foráneos</p>
+        <img src="../img/logo.png" alt="Logo de Transportes Fletes Sereno Váldez" style="height: 80px; margin-right: 15px;">
+        <div>
+            <h1>Transportes Fletes Sereno Váldez</h1>
+            <p>Transportes de carga viajes locales y foráneos</p>
+        </div>
     </header>
 
     <!-- Navegación -->
@@ -228,14 +445,16 @@
         <a href="#home">Inicio</a>
         <a href="#cotizar">Cotizar</a>
         <a href="#contact">Contacto</a>
+        <a href="#nosotros">Nosotros</a> 
     </nav>
+    
 
     <!-- Sección de Inicio con Carrusel -->
     <section id="home" class="inicio">
         <div class="slider">
-            <img src="../img/carretera camion.jpeg" alt="img1">
-            <img src="../img/carretera.png" alt="Slide 2">
-            <img src="../img/inter.png" alt="Slide 3">
+            <img src="../img/inter.png" alt="CamiónInternational">
+            <img src="../img/carretera.png" alt="Carretera">
+            <img src="../img/carretera camion.jpeg" alt="Camionencarretera">
         </div>
         <div class="overlay">
             <h2>Movemos tu mercancía con seguridad</h2>
@@ -244,82 +463,124 @@
         </div>
     </section>
 
-    <!-- Formulario de Cotización -->
-    <section id="cotizar">
-        <h2>Cotizar un Envío</h2>
-        <form>
-            <label for="origen">Origen:</label>
-            <select id="origen">
-                <option value="">Selecciona una ciudad</option>
-                <option value="Ciudad de México">Ciudad de México</option>
-                <option value="Monterrey">Monterrey</option>
-                <option value="Guadalajara">Guadalajara</option>
-                <option value="Puebla">Puebla</option>
-                <option value="Tijuana">Tijuana</option>
-                <option value="Mérida">Mérida</option>
-                <option value="Cancún">Cancún</option>
-                <option value="Oaxaca">Oaxaca</option>
-                <option value="Querétaro">Querétaro</option>
-                <option value="Hermosillo">Hermosillo</option>
-                <option value="Saltillo">Saltillo</option>
-                <option value="Chihuahua">Chihuahua</option>
-                <option value="Aguascalientes">Aguascalientes</option>
-                <option value="Morelia">Morelia</option>
-                <option value="San Luis Potosí">San Luis Potosí</option>
-                <option value="León">León</option>
-                <option value="Toluca">Toluca</option>
-                <option value="Durango">Durango</option>
-                <option value="La Paz">La Paz</option>
-                <option value="Colima">Colima</option>
-                <option value="Culiacán">Culiacán</option>
-                <option value="Xalapa">Xalapa</option>
-                <option value="Tlaxcala">Tlaxcala</option>
-                <option value="Tuxtla Gutiérrez">Tuxtla Gutiérrez</option>
-                <option value="Villahermosa">Villahermosa</option>
-                <option value="Mazatlán">Mazatlán</option>
-                <option value="Chetumal">Chetumal</option>
-                <option value="Tepic">Tepic</option>
-                <option value="Zacatecas">Zacatecas</option>
-            </select>
-            <label for="destino">Destino:</label>
-            <select id="destino">
-                <option value="">Selecciona una ciudad</option>
-                <option value="Ciudad de México">Ciudad de México</option>
-                <option value="Monterrey">Monterrey</option>
-                <option value="Guadalajara">Guadalajara</option>
-                <option value="Puebla">Puebla</option>
-                <option value="Tijuana">Tijuana</option>
-                <option value="Mérida">Mérida</option>
-                <option value="Cancún">Cancún</option>
-                <option value="Oaxaca">Oaxaca</option>
-                <option value="Querétaro">Querétaro</option>
-                <option value="Hermosillo">Hermosillo</option>
-                <option value="Saltillo">Saltillo</option>
-                <option value="Chihuahua">Chihuahua</option>
-                <option value="Aguascalientes">Aguascalientes</option>
-                <option value="Morelia">Morelia</option>
-                <option value="San Luis Potosí">San Luis Potosí</option>
-                <option value="León">León</option>
-                <option value="Toluca">Toluca</option>
-                <option value="Durango">Durango</option>
-                <option value="La Paz">La Paz</option>
-                <option value="Colima">Colima</option>
-                <option value="Culiacán">Culiacán</option>
-                <option value="Xalapa">Xalapa</option>
-                <option value="Tlaxcala">Tlaxcala</option>
-                <option value="Tuxtla Gutiérrez">Tuxtla Gutiérrez</option>
-                <option value="Villahermosa">Villahermosa</option>
-                <option value="Mazatlán">Mazatlán</option>
-                <option value="Chetumal">Chetumal</option>
-                <option value="Tepic">Tepic</option>
-                <option value="Zacatecas">Zacatecas</option>
-            </select>
-            <label for="peso">Peso del envío (kg):</label>
-            <input type="number" id="peso" min="1" placeholder="Ingrese el peso en kilogramos">
-            <button type="button" onclick="calcularPrecio()">Calcular Precio</button>
-        </form>
-        <div id="resultado"></div>
-    </section>
+   <!-- Formulario de Cotización -->
+<section id="cotizar">
+    <h2>Cotizar un Envío</h2>
+    <form>
+        <label for="origen">Origen:</label>
+        <select id="origen">
+            <option value="">Selecciona una ciudad</option>
+            <option value="Ciudad de México">Ciudad de México</option>
+            <option value="Monterrey">Monterrey</option>
+            <option value="Guadalajara">Guadalajara</option>
+            <option value="Puebla">Puebla</option>
+            <option value="Tijuana">Tijuana</option>
+            <option value="Mérida">Mérida</option>
+            <option value="Cancún">Cancún</option>
+            <option value="Oaxaca">Oaxaca</option>
+            <option value="Querétaro">Querétaro</option>
+            <option value="Hermosillo">Hermosillo</option>
+            <option value="Saltillo">Saltillo</option>
+            <option value="Chihuahua">Chihuahua</option>
+            <option value="Aguascalientes">Aguascalientes</option>
+            <option value="Morelia">Morelia</option>
+            <option value="San Luis Potosí">San Luis Potosí</option>
+            <option value="León">León</option>
+            <option value="Toluca">Toluca</option>
+            <option value="Durango">Durango</option>
+            <option value="La Paz">La Paz</option>
+            <option value="Colima">Colima</option>
+            <option value="Culiacán">Culiacán</option>
+            <option value="Xalapa">Xalapa</option>
+            <option value="Tlaxcala">Tlaxcala</option>
+            <option value="Tuxtla Gutiérrez">Tuxtla Gutiérrez</option>
+            <option value="Villahermosa">Villahermosa</option>
+            <option value="Mazatlán">Mazatlán</option>
+            <option value="Chetumal">Chetumal</option>
+            <option value="Tepic">Tepic</option>
+            <option value="Zacatecas">Zacatecas</option>
+        </select>
+
+        <label for="destino">Destino:</label>
+        <select id="destino">
+            <option value="">Selecciona una ciudad</option>
+            <!-- Aquí las mismas ciudades que en el origen -->
+            <option value="Ciudad de México">Ciudad de México</option>
+            <option value="Monterrey">Monterrey</option>
+            <option value="Guadalajara">Guadalajara</option>
+            <option value="Puebla">Puebla</option>
+            <option value="Tijuana">Tijuana</option>
+            <option value="Mérida">Mérida</option>
+            <option value="Cancún">Cancún</option>
+            <option value="Oaxaca">Oaxaca</option>
+            <option value="Querétaro">Querétaro</option>
+            <option value="Hermosillo">Hermosillo</option>
+            <option value="Saltillo">Saltillo</option>
+            <option value="Chihuahua">Chihuahua</option>
+            <option value="Aguascalientes">Aguascalientes</option>
+            <option value="Morelia">Morelia</option>
+            <option value="San Luis Potosí">San Luis Potosí</option>
+            <option value="León">León</option>
+            <option value="Toluca">Toluca</option>
+            <option value="Durango">Durango</option>
+            <option value="La Paz">La Paz</option>
+            <option value="Colima">Colima</option>
+            <option value="Culiacán">Culiacán</option>
+            <option value="Xalapa">Xalapa</option>
+            <option value="Tlaxcala">Tlaxcala</option>
+            <option value="Tuxtla Gutiérrez">Tuxtla Gutiérrez</option>
+            <option value="Villahermosa">Villahermosa</option>
+            <option value="Mazatlán">Mazatlán</option>
+            <option value="Chetumal">Chetumal</option>
+            <option value="Tepic">Tepic</option>
+            <option value="Zacatecas">Zacatecas</option>
+        </select>
+
+        <label for="peso">Peso del envío (kg):</label>
+        <input type="number" id="peso" min="1" placeholder="Ingrese el peso en kilogramos">
+
+        <button type="button" onclick="calcularPrecio()">Calcular Precio</button>
+    </form>
+
+    <div id="resultado"></div>
+</section>
+    <!-- Sección de Nuestra Historia -->
+<section id="nuestra-historia">
+    <div class="contenido-historia">
+        <div class="texto-historia">
+            <h2>Misión y Visión</h2>
+            <p>
+               Visión: "Ser reconocidos como la opción más confiable y eficiente en transporte de carga local y foráneo, con un servicio de excelencia que supere las expectativas de nuestros clientes. Aspiramos a crecer de manera sostenible, innovando constantemente en nuestras operaciones y promoviendo el desarrollo económico y social en las regiones donde operamos."
+            </p>
+            <p>Misión:"Proveer servicios de transporte de carga local y foráneo de manera segura, puntual y eficiente, adaptándonos a las necesidades de nuestros clientes mediante soluciones logísticas integrales. Nuestro compromiso es garantizar la satisfacción de nuestros clientes al transportar sus mercancías con responsabilidad, confianza y atención personalizada, contribuyendo al desarrollo económico de las comunidades en las que operamos."
+            </p>
+        </div>
+    </div>
+</section>
+<section id="nosotros">
+ 
+    <!-- Sección de Valores -->
+<section id="valores">
+    <h2>Nuestros Valores</h2>
+    <div class="valores">
+        <div class="valor">
+            <div class="icono">🏆</div>
+            <div class="titulo">Excelencia</div>
+            <p class="descripcion">Buscamos siempre ofrecer la mejor calidad en nuestros productos y servicios, superando las expectativas de nuestros clientes.</p>
+        </div>
+        <div class="valor">
+            <div class="icono">🤝</div>
+            <div class="titulo">Integridad</div>
+            <p class="descripcion">Actuamos con ética y transparencia en cada decisión, garantizando la confianza de todos nuestros colaboradores.</p>
+        </div>
+        <div class="valor">
+            <div class="icono">📂</div>
+            <div class="titulo">Responsabilidad</div>
+            <p class="descripcion">Asumimos nuestras acciones y cumplimos con nuestros compromisos de manera puntual y eficiente.</p>
+        </div>
+    </div>
+</section>
+
 
     <!-- Sección de Contacto -->
     <section id="contact">
@@ -339,8 +600,9 @@
             </div>
             <div class="contacto-item">
                 <i class="fas fa-envelope"></i>
-                <span>contacto@fletesseronovaldz.com</span>
+                <span>aaron@fletesserenovaldez.com</span>
             </div>
+            
         </div>
     </section>
 
@@ -350,29 +612,71 @@
     </footer>
 
     <script>
-  function calcularPrecio() {
-    const origen = document.getElementById("origen").value.trim();
-    const destino = document.getElementById("destino").value.trim();
-    const peso = parseFloat(document.getElementById("peso").value.trim());
-    let precio = 0;
+  
+  
+// Definir tarifas por ciudad
+const tarifas = {
+    "Ciudad de México": 100,
+    "Monterrey": 150,
+    "Guadalajara": 120,
+    "Puebla": 110,
+    "Tijuana": 160,
+    "Mérida": 180,
+    "Cancún": 170,
+    "Oaxaca": 130,
+    "Querétaro": 140,
+    "Hermosillo": 160,
+    "Saltillo": 150,
+    "Chihuahua": 140,
+    "Aguascalientes": 120,
+    "Morelia": 110,
+    "San Luis Potosí": 140,
+    "León": 130,
+    "Toluca": 100,
+    "Durango": 150,
+    "La Paz": 190,
+    "Colima": 170,
+    "Culiacán": 160,
+    "Xalapa": 110,
+    "Tlaxcala": 100,
+    "Tuxtla Gutiérrez": 140,
+    "Villahermosa": 160,
+    "Mazatlán": 180,
+    "Chetumal": 170,
+    "Tepic": 150,
+    "Zacatecas": 130
+};
 
-    // Validar que todos los campos estén completos y que el peso sea un número válido
-    if (origen && destino && !isNaN(peso) && peso > 0) {
-        // Calcular el precio basado en las combinaciones de origen y destino
-        if (origen === "CiudadA" && destino === "CiudadB") {
-            precio = peso * 15 + 200; // Ejemplo para CiudadA a CiudadB
-        } else if (origen === "CiudadA" && destino === "CiudadC") {
-            precio = peso * 12 + 150; // Ejemplo para CiudadA a CiudadC
-        } else {
-            precio = peso * 10 + 100; // Precio base por defecto
-        }
+// Función para calcular el precio
+function calcularPrecio() {
+    const origen = document.getElementById('origen').value;
+    const destino = document.getElementById('destino').value;
+    const peso = document.getElementById('peso').value;
 
-        document.getElementById("resultado").innerText = `Precio estimado: $${precio.toFixed(2)} MXN`;
-    } else {
-        document.getElementById("resultado").innerText = "Por favor completa todos los campos correctamente.";
+    // Verificar que todos los campos estén completos
+    if (!origen || !destino || !peso) {
+        document.getElementById('resultado').innerHTML = 'Por favor, complete todos los campos.';
+        return;
     }
+
+    // Calcular el precio (suponiendo una tarifa base y un incremento por peso)
+    const tarifaOrigen = tarifas[origen];
+    const tarifaDestino = tarifas[destino];
+
+    if (!tarifaOrigen || !tarifaDestino) {
+        document.getElementById('resultado').innerHTML = 'No se pudo calcular la tarifa para las ciudades seleccionadas.';
+        return;
+    }
+
+    // Cálculo simple: tarifa base * peso
+    const precioBase = tarifaOrigen + tarifaDestino;
+    const precioTotal = precioBase * peso;
+
+    // Mostrar el resultado
+    document.getElementById('resultado').innerHTML = `El precio estimado para el envío es: $${precioTotal.toFixed(2)}`;
 }
 
-    </script>
+</script>
+
 </body>
 </html>   
